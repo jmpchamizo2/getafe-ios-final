@@ -12,11 +12,34 @@ class DataManager {
     // MARK: - Singleton declaration
     static let shared = DataManager()
     private init() {}
+    private var usersFromUsersDB: Array<User> {
+        let usersDAO = usersDB
+        // Convertir listado de UserDAO a listado de User
+        return users(from: usersDAO)
+    }
+    
+    private var usersDB: Array<UserDAO> {
+        return Array(DatabaseManager.shared.users)
+    }
+    
+    var optionSelected: Int {
+        return DatabaseManager.shared.optionSelected
+    }
     
     
+    func users(forceUpdate: Bool, completion: @escaping ServiceCompletion){
+        switch forceUpdate {
+        case true:
+            usersForceUpdate(completion: completion)
+        default:
+            users(completion: completion)
+        }
+    }
+    
+    // MARK: - Public Methods
     func users(completion: @escaping ServiceCompletion) {
         DispatchQueue.global(qos: .background).async { [weak self] in
-            if let users = self?.usersFromUsersDB(), users.count > 0 {
+            if let users = self?.usersFromUsersDB, users.count > 0 {
                 // devolver userDB
                 DispatchQueue.main.async {
                     completion(.success(data: users))
@@ -48,7 +71,7 @@ class DataManager {
                         // Guardar usuarios en la base de datos
                         self?.save(users: usersDTO)
                         // Cargar usuarios almacenados en la base de datos
-                        let users = self?.usersFromUsersDB()
+                        let users = self?.usersFromUsersDB
                         
                         DispatchQueue.main.async {
                             completion(.success(data: users))
@@ -64,6 +87,8 @@ class DataManager {
             }
         }
     }
+    
+    
     
     func user(by id: String, completion: @escaping ServiceCompletion) {
         DispatchQueue.global(qos: .background).async { [weak self] in
@@ -82,10 +107,12 @@ class DataManager {
         }
     }
     
-    
-    private func usersDB() -> Array<UserDAO> {
-        return Array(DatabaseManager.shared.users())
+    func save(optionSelected: Int){
+        DatabaseManager.shared.save(option: optionSelected)
     }
+    
+    // MARK: - Private Methods
+
     
     private func save(users: UsersDTO) {
         guard let usersToSave = users.users else {
@@ -115,13 +142,6 @@ class DataManager {
         DatabaseManager.shared.save(user: userDB)
     }
     
-    private func usersFromUsersDB() -> Array<User> {
-        let usersDAO = usersDB()
-        // Convertir listado de UserDAO a listado de User
-        return users(from: usersDAO)
-    }
-    
-    
     private func users(from usersDAO: Array<UserDAO>) -> Array<User> {
         return usersDAO.compactMap { userDAO in
             return self.user(from: userDAO)
@@ -138,4 +158,5 @@ class DataManager {
                     country: userDAO.country,
                     nationality: userDAO.nationality)
     }
+    
 }

@@ -10,6 +10,12 @@ import UIKit
 
 
 class UsersViewController: UIViewController {
+    let refreshControlTableView = UIRefreshControl()
+    let refreshControlCollectionView = UIRefreshControl()
+
+
+
+
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -18,17 +24,8 @@ class UsersViewController: UIViewController {
     
     // Value changed
     @IBAction func onListTypePressed(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-            case 0:
-                tableView.isHidden = false
-                collectionView.isHidden = true
-                tableView.reloadData()
-                
-            default:
-                tableView.isHidden = true
-                collectionView.isHidden = false
-                collectionView.reloadData()
-        }
+        DataManager.shared.save(optionSelected: sender.selectedSegmentIndex)
+        loadSelectedSegmentIndex(option: segmentOptions.selectedSegmentIndex)
     }
     
     // MARK: - Properties
@@ -39,35 +36,76 @@ class UsersViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadOptionSelected()
         configure(tableView: tableView)
         configure(collectionView: collectionView)
-        
+        configureRefreshControl()
         loadUsers()
     }
     
+    private func configureRefreshControl() {
+        refreshControlTableView.addTarget(self, action: #selector(refreshUsers), for: .valueChanged)
+        refreshControlCollectionView.addTarget(self, action: #selector(refreshUsers), for: .valueChanged)
+    }
+    
+    private func loadOptionSelected() {
+        segmentOptions.selectedSegmentIndex = DataManager.shared.optionSelected
+    }
+    
+    @objc private func refreshUsers() {
+        DataManager.shared.users(forceUpdate: true, completion: {[weak self] result in
+            self?.parseUsers(result: result)
+        })
+    }
+    
     private func loadUsers() {
-        DataManager.shared.users { [weak self] result in
-            switch result {
-                case .success(let data):
-                    guard let users = data as? Array<User> else {
-                        return
-                    }
-                
-                    self?.users = users
-                    switch self?.segmentOptions.selectedSegmentIndex {
-                        case 0:
-                            self?.tableView.reloadData()
-                            
-                        default:
-                            self?.collectionView.reloadData()
-                    }
-                    
-                case .failure(let msg):
-                    print(msg)
+        DataManager.shared.users(forceUpdate: false, completion: {[weak self] result in
+            self?.parseUsers(result: result)
+        })
+    }
+    
+    private func parseUsers(result: ServiceResult) {
+        switch result {
+            
+            case .success(let data):
+                guard let users = data as? Array<User> else {
+                    return
+                }
+
+                self.users = users
+                loadSelectedSegmentIndex(option: segmentOptions.selectedSegmentIndex)
+            case .failure(let msg):
+                print(msg)
+                refreshControlCollectionView.endRefreshing()
+                refreshControlTableView.endRefreshing()
             }
+
+        }
+    
+    
+    private func loadSelectedSegmentIndex(option: Int?) {
+        switch option {
+        case 0:
+            loadTableView()
+        default:
+            loadCollectionView()
         }
     }
+    
+    private func loadCollectionView(){
+        self.collectionView.reloadData()
+        self.tableView.isHidden = true
+        self.collectionView.isHidden = false
+        self.refreshControlCollectionView.endRefreshing()
+    }
+    
+    private func loadTableView() {
+        self.tableView.reloadData()
+        self.tableView.isHidden = false
+        self.collectionView.isHidden = true
+        self.refreshControlTableView.endRefreshing()
+    }
+    
 }
 
 
@@ -85,6 +123,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.refreshControl = refreshControlTableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,7 +140,9 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
             let user = users[indexPath.row]
             cell.configureCell(image: user.avatar,
                                name: user.name,
-                               subtitle: user.email)
+                               subtitle: user.email,
+                               birthdate: user.birthdate,
+                               country: user.country)
         }
         
         return cell
@@ -122,6 +163,7 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
                                                    bottom: 0,
                                                    right: 0)
         
+        collectionView.refreshControl = refreshControlCollectionView
         collectionView.dataSource = self
         collectionView.delegate = self
     }
@@ -160,3 +202,9 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
                       height: size)
     }
 }
+
+
+
+
+
+

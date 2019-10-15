@@ -17,7 +17,23 @@ class DatabaseManager {
 
     // MARK: - Properties
     // Get the default Realm database
-    private let realm = try! Realm()
+    //En las extensiones no podemos crear variables, solo variables computadas
+    // No lo hacemos porque sino cada vez que llamasemos con nuestra variable computada a la bbdd crearía una nueva instancia y con muchos usuarios podría ser un problema.
+
+
+}
+
+//Mejor hacer extensiones por libreria
+//MARK: - Realm
+extension DatabaseManager{
+
+    private var realm: Realm {
+        return try! Realm()
+    }
+    
+    var users: Results<UserDAO> {
+        return realm.objects(UserDAO.self)
+    }
     
     
     func save(user: UserDAO) {
@@ -25,10 +41,6 @@ class DatabaseManager {
             realm.add(user,
                       update: .modified)
         }
-    }
-    
-    func users() -> Results<UserDAO> {
-        return realm.objects(UserDAO.self)
     }
     
     func user(by id: String) -> UserDAO? {
@@ -47,4 +59,23 @@ class DatabaseManager {
             realm.delete(user)
         }
     }
+}
+
+
+//MARK: - UserDefault
+extension DatabaseManager {
+    var KEY_OPTION_SELECTED: String {
+        "KEY_OPTION_SELECTED"
+    }
+    
+    //Funciones simples mejor hacerlas variables computadas
+    var optionSelected: Int {
+        return UserDefaults.standard.integer(forKey: KEY_OPTION_SELECTED)
+    }
+    
+    func save(option: Int){
+        UserDefaults.standard.set(option, forKey: KEY_OPTION_SELECTED)
+    }
+    
+
 }

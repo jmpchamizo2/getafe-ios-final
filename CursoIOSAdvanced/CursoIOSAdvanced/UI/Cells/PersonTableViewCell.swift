@@ -16,6 +16,8 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var mView: UIView!
     @IBOutlet weak var mImage: UIImageView!
     @IBOutlet weak var mLabelName: UILabel!
+    @IBOutlet weak var mLabelBirthdate: UILabel!
+    @IBOutlet weak var mLabelCountry: UILabel!
     @IBOutlet weak var mLabelEmail: UILabel!
     
     
@@ -23,6 +25,8 @@ class PersonTableViewCell: UITableViewCell {
         mImage.image = nil
         mLabelName.text = nil
         mLabelEmail.text = nil
+        mLabelBirthdate.text = nil
+        mLabelCountry.text = nil
     }
     
     override func awakeFromNib() {
@@ -32,10 +36,19 @@ class PersonTableViewCell: UITableViewCell {
         mView.configureShadows()
     }
     
-    func configureCell(image: String? = nil, name: String? = nil, subtitle: String? = nil) {
+    func configureCell(image: String? = nil, name: String? = nil, subtitle: String? = nil, birthdate: Date?, country: String?) {
         let url = URL(string: image ?? "")
         mImage.kf.setImage(with: url)
         mLabelName.text = name
         mLabelEmail.text = subtitle
+        mLabelCountry.text = country
+        mLabelBirthdate.text = dateToString(date: birthdate ?? Date())
+    }
+    
+    
+    private func dateToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy'"
+        return formatter.string(from: date)
     }
 }
