@@ -43,6 +43,23 @@ class UsersViewController: UIViewController {
         loadUsers()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? UserDetailViewController,
+                  let cell = sender as? UITableViewCell,
+                  let indexPath = tableView.indexPath(for: cell) else {
+                    if let destination = segue.destination as? UserDetailViewController,
+                    let cell = sender as? UICollectionViewCell,
+                        let indexPath = collectionView.indexPath(for: cell) {
+                                destination.user = users[indexPath.row]
+                                return
+                    }
+                    return
+            }
+
+        destination.user = users[indexPath.row]
+    }
+    
+    
     private func configureRefreshControl() {
         refreshControlTableView.addTarget(self, action: #selector(refreshUsers), for: .valueChanged)
         refreshControlCollectionView.addTarget(self, action: #selector(refreshUsers), for: .valueChanged)
@@ -116,7 +133,7 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
                                  bundle: nil),
                            forCellReuseIdentifier: PersonTableViewCell.cellIdentifier)
-        tableView.contentInset = UIEdgeInsets(top: segmentOptions.frame.origin.y + segmentOptions.bounds.height,
+        tableView.contentInset = UIEdgeInsets(top: segmentOptions.frame.origin.y - tableView.frame.origin.y + segmentOptions.frame.height,
                                               left: 0,
                                               bottom: 0,
                                               right: 0)
@@ -147,6 +164,13 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    
+    //Como ahora tenemos la celda en .xib y no podemos hacer desde el storyboard el segue debemos llamar a la función perform segue que ejecuta el segue con el identificador que le pasemos.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "SegueMainToDetail",
+                     sender: tableView.cellForRow(at: indexPath))
+    }
 }
 
 
@@ -158,7 +182,7 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
                                       bundle: nil),
                                 forCellWithReuseIdentifier: PersonCollectionViewCell.cellIdentifier)
         
-        collectionView.contentInset = UIEdgeInsets(top:  segmentOptions.frame.origin.y + segmentOptions.bounds.height,
+        collectionView.contentInset = UIEdgeInsets(top: segmentOptions.frame.origin.y - tableView.frame.origin.y + segmentOptions.frame.height,
                                                    left: 0,
                                                    bottom: 0,
                                                    right: 0)
@@ -200,6 +224,11 @@ extension UsersViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let size = (collectionView.frame.size.width - cellSpacing) / 2
         return CGSize(width: size,
                       height: size)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         performSegue(withIdentifier: "SegueMainToDetail",
+                            sender: collectionView.cellForItem(at: indexPath))
     }
 }
 

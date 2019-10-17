@@ -7,18 +7,59 @@
 //
 
 import UIKit
+import MapKit
 
 class MapTableViewCell: UITableViewCell {
 
+    static let cellIdentifier = String(describing: MapTableViewCell.self)
+    
+    // MARK: - Outlets -
+    @IBOutlet weak var mView: UIView!
+    @IBOutlet weak var mLabelTitle: UILabel!
+    @IBOutlet weak var mMapView: MKMapView!
+    
+    var latitudeString: String?
+    var longitudeString: String?
+    var location: CLLocation?
+    let regionRadius: CLLocationDistance = 1000
+    
+
+    
+    
+    // MARK: - Lifecycle -
+    override func prepareForReuse() {
+        mLabelTitle.text = nil
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        mView.layer.cornerRadius = 8.0
+        mView.configureShadows()
     }
+    
+    // MARK: - Configure methods -
+    func configureCell(latitudeString: String? = nil, longitudeString: String? = nil) {
+        self.latitudeString = latitudeString
+        self.longitudeString = longitudeString
+        guard let latitude: Double = Double(latitudeString ?? "0"),
+            let longitude: Double = Double(longitudeString ?? "0") else {
+                return
+        }
+        self.location = CLLocation(latitude: latitude, longitude: longitude)
+        guard let clLocation = location else {
+            return
+        }
+        centerMapOnLocation(location: clLocation)
+        mLabelTitle.text = "Map"
+    }
+    
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: regionRadius,
+                                                  longitudinalMeters: regionRadius)
+      mMapView.setRegion(coordinateRegion, animated: false)
     }
     
 }

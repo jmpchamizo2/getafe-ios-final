@@ -10,15 +10,37 @@ import UIKit
 
 class ContactDataTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    static let cellIdentifier = String(describing: ContactDataTableViewCell.self)
+    
+    // MARK: - Outlets -
+    @IBOutlet weak var mView: UIView!
+    @IBOutlet weak var mLabelTitle: UILabel!
+    @IBOutlet weak var mLabelEmail: UILabel!
+    @IBOutlet weak var mLabelPhone: UILabel!
+    
+    
+    // MARK: - Lifecycle -
+    override func prepareForReuse() {
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        mLabelEmail.text = nil
+        mLabelPhone.text = nil
+        mLabelTitle.text = nil
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        mView.layer.cornerRadius = 8.0
+        mView.configureShadows()
+    }
+    
+    // MARK: - Configure methods -
+    func configureCell(userEmail: String? = nil,
+                       userPhone: String? = nil) {
+
+        mLabelEmail.text = userEmail
+        mLabelPhone.text = userPhone
+        mLabelTitle.text = "Contact"
+
+    }
 }

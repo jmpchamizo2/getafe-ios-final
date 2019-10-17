@@ -136,6 +136,7 @@ class DataManager {
                              birthdate: user.dob?.date,
                              country: user.location?.country,
                              nationality: user.nat,
+                             phone: user.phone,
                              latitude: user.location?.coordinates?.latitude,
                              longitude: user.location?.coordinates?.longitude)
         
@@ -156,7 +157,10 @@ class DataManager {
                     email: userDAO.email,
                     birthdate: userDAO.birthdate,
                     country: userDAO.country,
-                    nationality: userDAO.nationality)
+                    nationality: userDAO.nationality,
+                    phone: userDAO.phone,
+                    latitude: userDAO.latitude,
+                    longitude: userDAO.longitude)
     }
     
 }

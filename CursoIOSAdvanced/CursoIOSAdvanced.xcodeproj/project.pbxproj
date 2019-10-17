@@ -39,6 +39,16 @@
 		0F5781E72347CADF008376DD /* StreetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5781E62347CADF008376DD /* StreetDTO.swift */; };
 		0F5781E92347CC6D008376DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5781E82347CC6D008376DD /* DataManager.swift */; };
 		0F67C746234CEE8D0057394D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67C745234CEE8D0057394D /* User.swift */; };
+		D98AE77923575F9000567F54 /* PersonalDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE77723575F9000567F54 /* PersonalDataTableViewCell.swift */; };
+		D98AE77A23575F9000567F54 /* PersonalDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AE77823575F9000567F54 /* PersonalDataTableViewCell.xib */; };
+		D98AE77D235762EE00567F54 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE77B235762EE00567F54 /* CountryTableViewCell.swift */; };
+		D98AE77E235762EE00567F54 /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AE77C235762EE00567F54 /* CountryTableViewCell.xib */; };
+		D98AE7812357646100567F54 /* ContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE77F2357646100567F54 /* ContactDataTableViewCell.swift */; };
+		D98AE7822357646100567F54 /* ContactDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AE7802357646100567F54 /* ContactDataTableViewCell.xib */; };
+		D98AE789235766B500567F54 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE787235766B500567F54 /* MapTableViewCell.swift */; };
+		D98AE78A235766B500567F54 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AE788235766B500567F54 /* MapTableViewCell.xib */; };
+		D98AE78C235768A600567F54 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE78B235768A600567F54 /* UserDetailViewController.swift */; };
+		D98AE790235793E100567F54 /* UserDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D98AE78F235793E100567F54 /* UserDetailStoryboard.storyboard */; };
 		DEA0DA86558E3E5277A9B952 /* Pods_CursoIOSAdvanced.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +88,16 @@
 		0F5781E82347CC6D008376DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0F67C745234CEE8D0057394D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6BD80344196F49C9E9FF7F3F /* Pods-CursoIOSAdvanced.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoIOSAdvanced.debug.xcconfig"; path = "Target Support Files/Pods-CursoIOSAdvanced/Pods-CursoIOSAdvanced.debug.xcconfig"; sourceTree = "<group>"; };
+		D98AE77723575F9000567F54 /* PersonalDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataTableViewCell.swift; sourceTree = "<group>"; };
+		D98AE77823575F9000567F54 /* PersonalDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalDataTableViewCell.xib; sourceTree = "<group>"; };
+		D98AE77B235762EE00567F54 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		D98AE77C235762EE00567F54 /* CountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
+		D98AE77F2357646100567F54 /* ContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataTableViewCell.swift; sourceTree = "<group>"; };
+		D98AE7802357646100567F54 /* ContactDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDataTableViewCell.xib; sourceTree = "<group>"; };
+		D98AE787235766B500567F54 /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		D98AE788235766B500567F54 /* MapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		D98AE78B235768A600567F54 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		D98AE78F235793E100567F54 /* UserDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		DF51D06A32F7A00D18B1B214 /* Pods-CursoIOSAdvanced.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoIOSAdvanced.release.xcconfig"; path = "Target Support Files/Pods-CursoIOSAdvanced/Pods-CursoIOSAdvanced.release.xcconfig"; sourceTree = "<group>"; };
 		FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CursoIOSAdvanced.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -170,6 +190,7 @@
 			children = (
 				0F4E3D17234523E2005DFA5F /* SplashViewController.swift */,
 				0F571BCC23465115000BB376 /* UsersViewController.swift */,
+				D98AE78B235768A600567F54 /* UserDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +201,7 @@
 				0F4E3D1E234523E3005DFA5F /* LaunchScreen.storyboard */,
 				0F571BD023465226000BB376 /* Splash.storyboard */,
 				0F4E3D19234523E2005DFA5F /* Main.storyboard */,
+				D98AE78F235793E100567F54 /* UserDetailStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -191,6 +213,14 @@
 				0F571BD3234662AC000BB376 /* PersonTableViewCell.xib */,
 				0F571BDA2346698E000BB376 /* PersonCollectionViewCell.swift */,
 				0F571BDB2346698E000BB376 /* PersonCollectionViewCell.xib */,
+				D98AE77723575F9000567F54 /* PersonalDataTableViewCell.swift */,
+				D98AE77823575F9000567F54 /* PersonalDataTableViewCell.xib */,
+				D98AE77B235762EE00567F54 /* CountryTableViewCell.swift */,
+				D98AE77C235762EE00567F54 /* CountryTableViewCell.xib */,
+				D98AE77F2357646100567F54 /* ContactDataTableViewCell.swift */,
+				D98AE7802357646100567F54 /* ContactDataTableViewCell.xib */,
+				D98AE787235766B500567F54 /* MapTableViewCell.swift */,
+				D98AE788235766B500567F54 /* MapTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -341,14 +371,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98AE7822357646100567F54 /* ContactDataTableViewCell.xib in Resources */,
 				0F4E3D20234523E3005DFA5F /* LaunchScreen.storyboard in Resources */,
 				0F571BDD2346698E000BB376 /* PersonCollectionViewCell.xib in Resources */,
 				0F4E3D1D234523E3005DFA5F /* Assets.xcassets in Resources */,
 				0F5781C7234796E8008376DD /* loading_animation.json in Resources */,
+				D98AE77E235762EE00567F54 /* CountryTableViewCell.xib in Resources */,
 				0F540AA8234E518100747252 /* users.json in Resources */,
 				0F4E3D1B234523E2005DFA5F /* Main.storyboard in Resources */,
 				0F571BCE23465226000BB376 /* Splash.storyboard in Resources */,
 				0F571BD5234662AC000BB376 /* PersonTableViewCell.xib in Resources */,
+				D98AE790235793E100567F54 /* UserDetailStoryboard.storyboard in Resources */,
+				D98AE78A235766B500567F54 /* MapTableViewCell.xib in Resources */,
+				D98AE77A23575F9000567F54 /* PersonalDataTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,15 +444,20 @@
 				0F5781CB2347B683008376DD /* UserDAO.swift in Sources */,
 				0F5781CF2347BEEE008376DD /* UsersDTO.swift in Sources */,
 				0F5781E32347C862008376DD /* TimezoneDTO.swift in Sources */,
+				D98AE77D235762EE00567F54 /* CountryTableViewCell.swift in Sources */,
 				0F5781DB2347C7FB008376DD /* CoordinatesDTO.swift in Sources */,
+				D98AE789235766B500567F54 /* MapTableViewCell.swift in Sources */,
 				0F5781E12347C841008376DD /* LoginDTO.swift in Sources */,
 				0F5781E92347CC6D008376DD /* DataManager.swift in Sources */,
 				0F4E3D14234523E2005DFA5F /* AppDelegate.swift in Sources */,
+				D98AE78C235768A600567F54 /* UserDetailViewController.swift in Sources */,
 				0F56CAE3234B890F00C34A67 /* DatabaseManager.swift in Sources */,
+				D98AE7812357646100567F54 /* ContactDataTableViewCell.swift in Sources */,
 				0F5781D72347C7AF008376DD /* NameDTO.swift in Sources */,
 				0F571BD923466583000BB376 /* UIView+Utils.swift in Sources */,
 				0F5781DD2347C814008376DD /* IdDTO.swift in Sources */,
 				0F571BDC2346698E000BB376 /* PersonCollectionViewCell.swift in Sources */,
+				D98AE77923575F9000567F54 /* PersonalDataTableViewCell.swift in Sources */,
 				0F5781D92347C7D0008376DD /* PictureDTO.swift in Sources */,
 				0F5781DF2347C828008376DD /* LocationDTO.swift in Sources */,
 				0F4E3D16234523E2005DFA5F /* SceneDelegate.swift in Sources */,
