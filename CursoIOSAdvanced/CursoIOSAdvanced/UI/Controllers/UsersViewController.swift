@@ -43,6 +43,11 @@ class UsersViewController: UIViewController {
         loadUsers()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadUsers()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? UserDetailViewController,
                   let cell = sender as? UITableViewCell,

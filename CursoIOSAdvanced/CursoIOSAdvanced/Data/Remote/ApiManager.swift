@@ -71,7 +71,7 @@ class ApiManager {
 
         Alamofire.request(url_users,
                           method: .get ,
-                          parameters: ["results": 5],
+                          parameters: ["results": 10],
                           encoding: URLEncoding.queryString).response { response in
                             if let responseData = response.data {
                                 let usersDTO = self.jsonToUsersDTO(json: responseData)
@@ -89,7 +89,7 @@ class ApiManager {
 
         Alamofire.request(url_users,
                           method: .get ,
-                          parameters: ["results": 2])
+                          parameters: ["results": 10])
             .validate()
             .responseJSON { response in
                 guard response.result.isSuccess,

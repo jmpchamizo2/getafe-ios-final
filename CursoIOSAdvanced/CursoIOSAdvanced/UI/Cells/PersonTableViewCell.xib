@@ -16,13 +16,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jb2-hM-mWj">
-                        <rect key="frame" x="8" y="12" width="398" height="99.5"/>
+                        <rect key="frame" x="8" y="12" width="398" height="100"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rdu-yJ-rh7">
-                                <rect key="frame" x="0.0" y="8" width="390" height="83.5"/>
+                                <rect key="frame" x="0.0" y="8" width="390" height="84"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zqf-nH-22p">
-                                        <rect key="frame" x="0.0" y="0.0" width="191" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHH-5A-7Jv">
                                                 <rect key="frame" x="72.5" y="0.0" width="46" height="20"/>
@@ -34,7 +34,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0z-Qd-q7h">
-                                                <rect key="frame" x="50.5" y="24" width="90" height="59.5"/>
+                                                <rect key="frame" x="50.5" y="24" width="90" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="MUp-dQ-lV8"/>
                                                     <constraint firstAttribute="width" constant="90" id="lQD-nP-3qB"/>
@@ -43,7 +43,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SJ0-iz-JzW">
-                                        <rect key="frame" x="199" y="0.0" width="191" height="83.5"/>
+                                        <rect key="frame" x="199" y="0.0" width="191" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgD-GS-9Lr">
                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="22.5"/>
@@ -52,13 +52,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpT-9I-ix9">
-                                                <rect key="frame" x="0.0" y="30.5" width="191" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="30.5" width="191" height="23"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFZ-7f-bv7">
-                                                <rect key="frame" x="0.0" y="61" width="191" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="191" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

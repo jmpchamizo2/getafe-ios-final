@@ -19,3 +19,18 @@ extension UIView {
         self.layer.shadowRadius = radius
     }
 }
+
+extension UIImageView {
+
+    func makeRounded() {
+
+        self.layer.borderWidth = 1
+        self.layer.masksToBounds = false
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = self.frame.width / 2
+        self.clipsToBounds = true
+        debugPrint("makeRounded:  \(self.frame.width)")
+        debugPrint("makeRounded: \(self.frame.height)")
+        
+    }
+}

@@ -34,6 +34,7 @@ class PersonTableViewCell: UITableViewCell {
         
         mView.layer.cornerRadius = 8.0
         mView.configureShadows()
+        mImage.makeRounded()
     }
     
     func configureCell(image: String? = nil, name: String? = nil, subtitle: String? = nil, birthdate: Date?, country: String?) {
@@ -52,3 +53,7 @@ class PersonTableViewCell: UITableViewCell {
         return formatter.string(from: date)
     }
 }
+
+
+
+

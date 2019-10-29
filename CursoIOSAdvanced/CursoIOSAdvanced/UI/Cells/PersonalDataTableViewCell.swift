@@ -36,6 +36,9 @@ class PersonalDataTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         mView.configureShadows()
+        mImage.makeRounded()
+        debugPrint(mImage.frame.width)
+        debugPrint(mImage.frame.height)
     }
     
     // MARK: - Configure methods -

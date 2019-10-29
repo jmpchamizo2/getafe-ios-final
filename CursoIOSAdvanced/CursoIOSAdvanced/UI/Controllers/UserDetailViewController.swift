@@ -22,8 +22,7 @@ class UserDetailViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func onDeletePressed(_ sender: UIButton) {
-    }
+
 
     
     // MARK: - Properties
@@ -36,8 +35,29 @@ class UserDetailViewController: UIViewController {
        override func viewDidLoad() {
            super.viewDidLoad()
            configure(tableView: tableView)
+           title = user?.name
        }
     
+    
+    @IBAction func onDeletePressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Eliminar Usuario",
+                                      message: "Vas a eliminar el usuario, ¿estás seguro?",
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "eliminar",
+                                      style: .destructive,
+                                      handler: {[weak self] _ in
+            
+            DataManager.shared.deleteUser(user: self?.user)
+            //defaultStudents.removeAll(where: { $0.name == self?.student?.name ?? ""})
+            self?.navigationController?.popViewController(animated: true)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "cancelar",
+                                      style: .cancel))
+        
+        present(alert, animated: true)
+    }
     
     
 }
@@ -65,13 +85,13 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case UserDetailCellType.personalData.rawValue:
-            return 120
+            return 155
         case UserDetailCellType.country.rawValue:
             return 60
         case UserDetailCellType.contactData.rawValue:
             return 84
         case UserDetailCellType.map.rawValue:
-            return 450
+            return 450 
         default:
             return 0
         }
@@ -81,14 +101,16 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
 
         switch indexPath.row {
         case UserDetailCellType.personalData.rawValue:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PersonalDataTableViewCell.cellIdentifier,
-                                                           for: indexPath) as? PersonalDataTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PersonTableViewCell.cellIdentifier,
+                                                           for: indexPath) as? PersonTableViewCell else {
                                                             return UITableViewCell()
             }
             cell.configureCell(image: user?.avatar,
-                               userName: user?.name,
-                               userDate: user?.birthdate,
-                               userCity: user?.nationality)
+                               name: user?.name,
+                               subtitle: user?.lastName,
+                               birthdate: user?.birthdate,
+                               country: user?.country)
+
             return cell
             
         case UserDetailCellType.country.rawValue:
@@ -125,9 +147,9 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     private func registerCells(tableView: UITableView){
-        tableView.register(UINib(nibName: PersonalDataTableViewCell.cellIdentifier,
+        tableView.register(UINib(nibName: PersonTableViewCell.cellIdentifier,
               bundle: nil),
-        forCellReuseIdentifier: PersonalDataTableViewCell.cellIdentifier)
+        forCellReuseIdentifier: PersonTableViewCell.cellIdentifier)
         tableView.register(UINib(nibName: CountryTableViewCell.cellIdentifier,
               bundle: nil),
         forCellReuseIdentifier: CountryTableViewCell.cellIdentifier)

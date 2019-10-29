@@ -20,8 +20,7 @@ class MapTableViewCell: UITableViewCell {
     
     var latitudeString: String?
     var longitudeString: String?
-    var location: CLLocation?
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 100000
     
 
     
@@ -46,11 +45,8 @@ class MapTableViewCell: UITableViewCell {
             let longitude: Double = Double(longitudeString ?? "0") else {
                 return
         }
-        self.location = CLLocation(latitude: latitude, longitude: longitude)
-        guard let clLocation = location else {
-            return
-        }
-        centerMapOnLocation(location: clLocation)
+        let location = CLLocation(latitude: latitude, longitude: longitude)
+        centerMapOnLocation(location: location)
         mLabelTitle.text = "Map"
     }
     
@@ -59,7 +55,6 @@ class MapTableViewCell: UITableViewCell {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: regionRadius,
                                                   longitudinalMeters: regionRadius)
-      mMapView.setRegion(coordinateRegion, animated: false)
+      mMapView.setRegion(coordinateRegion, animated: true)
     }
-    
 }

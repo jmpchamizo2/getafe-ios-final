@@ -163,4 +163,27 @@ class DataManager {
                     longitude: userDAO.longitude)
     }
     
+    
+    func deleteUser(user: User?){
+        DatabaseManager.shared.delete(user: DatabaseManager.shared.user(by: user!.id)!)
+        
+        
+    }
+    
+    
+    func addUser(user: UserDAO?, completion: @escaping ServiceCompletion){
+        DispatchQueue.global(qos: .background).async {
+            guard let userDAO = user else {
+                DispatchQueue.main.async {
+                    completion(.failure(msg: "No se ha encontrado el usuario"))
+                }
+                return
+            }
+            DatabaseManager.shared.save(user: userDAO)
+            DispatchQueue.main.async {
+                completion(.success(data: user))
+
+            }
+        }
+    }
 }

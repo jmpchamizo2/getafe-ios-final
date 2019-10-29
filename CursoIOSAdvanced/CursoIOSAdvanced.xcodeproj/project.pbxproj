@@ -49,6 +49,26 @@
 		D98AE78A235766B500567F54 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98AE788235766B500567F54 /* MapTableViewCell.xib */; };
 		D98AE78C235768A600567F54 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE78B235768A600567F54 /* UserDetailViewController.swift */; };
 		D98AE790235793E100567F54 /* UserDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D98AE78F235793E100567F54 /* UserDetailStoryboard.storyboard */; };
+		D993B0232361EE1400BFE149 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D993B0252361EE1400BFE149 /* Localizable.strings */; };
+		D993B02A2361FC8900BFE149 /* AddUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D993B0292361FC8900BFE149 /* AddUser.storyboard */; };
+		D993B02D2361FE0F00BFE149 /* AddPersonDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993B02B2361FE0F00BFE149 /* AddPersonDataTableViewCell.swift */; };
+		D993B02E2361FE0F00BFE149 /* AddPersonDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993B02C2361FE0F00BFE149 /* AddPersonDataTableViewCell.xib */; };
+		D993B0312362116A00BFE149 /* AddContactDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993B02F2362116A00BFE149 /* AddContactDataTableViewCell.swift */; };
+		D993B0322362116A00BFE149 /* AddContactDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993B0302362116A00BFE149 /* AddContactDataTableViewCell.xib */; };
+		D993B0352362136300BFE149 /* AddGenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993B0332362136300BFE149 /* AddGenderTableViewCell.swift */; };
+		D993B0362362136300BFE149 /* AddGenderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993B0342362136300BFE149 /* AddGenderTableViewCell.xib */; };
+		D993B0392362165C00BFE149 /* AddNationalityDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993B0372362165C00BFE149 /* AddNationalityDataTableViewCell.swift */; };
+		D993B03A2362165C00BFE149 /* AddNationalityDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993B0382362165C00BFE149 /* AddNationalityDataTableViewCell.xib */; };
+		D993B03D23621B0700BFE149 /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993B03B23621B0700BFE149 /* LabelCollectionViewCell.swift */; };
+		D993B03E23621B0700BFE149 /* LabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993B03C23621B0700BFE149 /* LabelCollectionViewCell.xib */; };
+		D993B04123621B8C00BFE149 /* AddBirthDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993B03F23621B8C00BFE149 /* AddBirthDateTableViewCell.swift */; };
+		D993B04223621B8C00BFE149 /* AddBirthDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993B04023621B8C00BFE149 /* AddBirthDateTableViewCell.xib */; };
+		D993B04923621D0800BFE149 /* AddLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993B04723621D0800BFE149 /* AddLocationTableViewCell.swift */; };
+		D993B04A23621D0800BFE149 /* AddLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993B04823621D0800BFE149 /* AddLocationTableViewCell.xib */; };
+		D993B04D23621ED700BFE149 /* AddLocationMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993B04B23621ED700BFE149 /* AddLocationMapTableViewCell.swift */; };
+		D993B04E23621ED700BFE149 /* AddLocationMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993B04C23621ED700BFE149 /* AddLocationMapTableViewCell.xib */; };
+		D993B051236220E200BFE149 /* SaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993B04F236220E200BFE149 /* SaveTableViewCell.swift */; };
+		D993B052236220E200BFE149 /* SaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D993B050236220E200BFE149 /* SaveTableViewCell.xib */; };
 		DEA0DA86558E3E5277A9B952 /* Pods_CursoIOSAdvanced.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +118,27 @@
 		D98AE788235766B500567F54 /* MapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
 		D98AE78B235768A600567F54 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		D98AE78F235793E100567F54 /* UserDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		D993B0242361EE1400BFE149 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D993B0262361EE3700BFE149 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D993B0292361FC8900BFE149 /* AddUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddUser.storyboard; sourceTree = "<group>"; };
+		D993B02B2361FE0F00BFE149 /* AddPersonDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonDataTableViewCell.swift; sourceTree = "<group>"; };
+		D993B02C2361FE0F00BFE149 /* AddPersonDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPersonDataTableViewCell.xib; sourceTree = "<group>"; };
+		D993B02F2362116A00BFE149 /* AddContactDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactDataTableViewCell.swift; sourceTree = "<group>"; };
+		D993B0302362116A00BFE149 /* AddContactDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddContactDataTableViewCell.xib; sourceTree = "<group>"; };
+		D993B0332362136300BFE149 /* AddGenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGenderTableViewCell.swift; sourceTree = "<group>"; };
+		D993B0342362136300BFE149 /* AddGenderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddGenderTableViewCell.xib; sourceTree = "<group>"; };
+		D993B0372362165C00BFE149 /* AddNationalityDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNationalityDataTableViewCell.swift; sourceTree = "<group>"; };
+		D993B0382362165C00BFE149 /* AddNationalityDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNationalityDataTableViewCell.xib; sourceTree = "<group>"; };
+		D993B03B23621B0700BFE149 /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		D993B03C23621B0700BFE149 /* LabelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCollectionViewCell.xib; sourceTree = "<group>"; };
+		D993B03F23621B8C00BFE149 /* AddBirthDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthDateTableViewCell.swift; sourceTree = "<group>"; };
+		D993B04023621B8C00BFE149 /* AddBirthDateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBirthDateTableViewCell.xib; sourceTree = "<group>"; };
+		D993B04723621D0800BFE149 /* AddLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationTableViewCell.swift; sourceTree = "<group>"; };
+		D993B04823621D0800BFE149 /* AddLocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLocationTableViewCell.xib; sourceTree = "<group>"; };
+		D993B04B23621ED700BFE149 /* AddLocationMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationMapTableViewCell.swift; sourceTree = "<group>"; };
+		D993B04C23621ED700BFE149 /* AddLocationMapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLocationMapTableViewCell.xib; sourceTree = "<group>"; };
+		D993B04F236220E200BFE149 /* SaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTableViewCell.swift; sourceTree = "<group>"; };
+		D993B050236220E200BFE149 /* SaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveTableViewCell.xib; sourceTree = "<group>"; };
 		DF51D06A32F7A00D18B1B214 /* Pods-CursoIOSAdvanced.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoIOSAdvanced.release.xcconfig"; path = "Target Support Files/Pods-CursoIOSAdvanced/Pods-CursoIOSAdvanced.release.xcconfig"; sourceTree = "<group>"; };
 		FE5600CFB193B50E21864254 /* Pods_CursoIOSAdvanced.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CursoIOSAdvanced.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,6 +201,7 @@
 				0F5781C6234796E8008376DD /* loading_animation.json */,
 				0F540AA7234E518100747252 /* users.json */,
 				0F4E3D1C234523E3005DFA5F /* Assets.xcassets */,
+				D993B0252361EE1400BFE149 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -202,6 +244,7 @@
 				0F571BD023465226000BB376 /* Splash.storyboard */,
 				0F4E3D19234523E2005DFA5F /* Main.storyboard */,
 				D98AE78F235793E100567F54 /* UserDetailStoryboard.storyboard */,
+				D993B0292361FC8900BFE149 /* AddUser.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -221,6 +264,24 @@
 				D98AE7802357646100567F54 /* ContactDataTableViewCell.xib */,
 				D98AE787235766B500567F54 /* MapTableViewCell.swift */,
 				D98AE788235766B500567F54 /* MapTableViewCell.xib */,
+				D993B02B2361FE0F00BFE149 /* AddPersonDataTableViewCell.swift */,
+				D993B02C2361FE0F00BFE149 /* AddPersonDataTableViewCell.xib */,
+				D993B02F2362116A00BFE149 /* AddContactDataTableViewCell.swift */,
+				D993B0302362116A00BFE149 /* AddContactDataTableViewCell.xib */,
+				D993B0332362136300BFE149 /* AddGenderTableViewCell.swift */,
+				D993B0342362136300BFE149 /* AddGenderTableViewCell.xib */,
+				D993B03B23621B0700BFE149 /* LabelCollectionViewCell.swift */,
+				D993B03C23621B0700BFE149 /* LabelCollectionViewCell.xib */,
+				D993B03F23621B8C00BFE149 /* AddBirthDateTableViewCell.swift */,
+				D993B04023621B8C00BFE149 /* AddBirthDateTableViewCell.xib */,
+				D993B0372362165C00BFE149 /* AddNationalityDataTableViewCell.swift */,
+				D993B0382362165C00BFE149 /* AddNationalityDataTableViewCell.xib */,
+				D993B04723621D0800BFE149 /* AddLocationTableViewCell.swift */,
+				D993B04823621D0800BFE149 /* AddLocationTableViewCell.xib */,
+				D993B04B23621ED700BFE149 /* AddLocationMapTableViewCell.swift */,
+				D993B04C23621ED700BFE149 /* AddLocationMapTableViewCell.xib */,
+				D993B04F236220E200BFE149 /* SaveTableViewCell.swift */,
+				D993B050236220E200BFE149 /* SaveTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -268,8 +329,8 @@
 				0F5781D42347C7A1008376DD /* DobDTO.swift */,
 				0F5781D62347C7AF008376DD /* NameDTO.swift */,
 				0F5781D82347C7D0008376DD /* PictureDTO.swift */,
-				0F5781DA2347C7FB008376DD /* CoordinatesDTO.swift */,
 				0F5781DE2347C828008376DD /* LocationDTO.swift */,
+				0F5781DA2347C7FB008376DD /* CoordinatesDTO.swift */,
 				0F5781E22347C862008376DD /* TimezoneDTO.swift */,
 				0F5781E62347CADF008376DD /* StreetDTO.swift */,
 				0F5781E02347C841008376DD /* LoginDTO.swift */,
@@ -355,6 +416,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 0F4E3D07234523E2005DFA5F;
 			productRefGroup = 0F4E3D11234523E2005DFA5F /* Products */;
@@ -374,15 +436,26 @@
 				D98AE7822357646100567F54 /* ContactDataTableViewCell.xib in Resources */,
 				0F4E3D20234523E3005DFA5F /* LaunchScreen.storyboard in Resources */,
 				0F571BDD2346698E000BB376 /* PersonCollectionViewCell.xib in Resources */,
+				D993B0232361EE1400BFE149 /* Localizable.strings in Resources */,
 				0F4E3D1D234523E3005DFA5F /* Assets.xcassets in Resources */,
+				D993B04223621B8C00BFE149 /* AddBirthDateTableViewCell.xib in Resources */,
 				0F5781C7234796E8008376DD /* loading_animation.json in Resources */,
+				D993B04E23621ED700BFE149 /* AddLocationMapTableViewCell.xib in Resources */,
 				D98AE77E235762EE00567F54 /* CountryTableViewCell.xib in Resources */,
 				0F540AA8234E518100747252 /* users.json in Resources */,
+				D993B02A2361FC8900BFE149 /* AddUser.storyboard in Resources */,
+				D993B03E23621B0700BFE149 /* LabelCollectionViewCell.xib in Resources */,
 				0F4E3D1B234523E2005DFA5F /* Main.storyboard in Resources */,
 				0F571BCE23465226000BB376 /* Splash.storyboard in Resources */,
 				0F571BD5234662AC000BB376 /* PersonTableViewCell.xib in Resources */,
+				D993B02E2361FE0F00BFE149 /* AddPersonDataTableViewCell.xib in Resources */,
+				D993B052236220E200BFE149 /* SaveTableViewCell.xib in Resources */,
+				D993B0322362116A00BFE149 /* AddContactDataTableViewCell.xib in Resources */,
 				D98AE790235793E100567F54 /* UserDetailStoryboard.storyboard in Resources */,
+				D993B03A2362165C00BFE149 /* AddNationalityDataTableViewCell.xib in Resources */,
 				D98AE78A235766B500567F54 /* MapTableViewCell.xib in Resources */,
+				D993B0362362136300BFE149 /* AddGenderTableViewCell.xib in Resources */,
+				D993B04A23621D0800BFE149 /* AddLocationTableViewCell.xib in Resources */,
 				D98AE77A23575F9000567F54 /* PersonalDataTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +511,7 @@
 			files = (
 				0F4E3D18234523E2005DFA5F /* SplashViewController.swift in Sources */,
 				0F571BD4234662AC000BB376 /* PersonTableViewCell.swift in Sources */,
+				D993B02D2361FE0F00BFE149 /* AddPersonDataTableViewCell.swift in Sources */,
 				0F571BCD23465115000BB376 /* UsersViewController.swift in Sources */,
 				0F5781D32347C252008376DD /* UserDTO.swift in Sources */,
 				0F5781E72347CADF008376DD /* StreetDTO.swift in Sources */,
@@ -445,21 +519,29 @@
 				0F5781CF2347BEEE008376DD /* UsersDTO.swift in Sources */,
 				0F5781E32347C862008376DD /* TimezoneDTO.swift in Sources */,
 				D98AE77D235762EE00567F54 /* CountryTableViewCell.swift in Sources */,
+				D993B0392362165C00BFE149 /* AddNationalityDataTableViewCell.swift in Sources */,
 				0F5781DB2347C7FB008376DD /* CoordinatesDTO.swift in Sources */,
 				D98AE789235766B500567F54 /* MapTableViewCell.swift in Sources */,
 				0F5781E12347C841008376DD /* LoginDTO.swift in Sources */,
 				0F5781E92347CC6D008376DD /* DataManager.swift in Sources */,
 				0F4E3D14234523E2005DFA5F /* AppDelegate.swift in Sources */,
+				D993B04123621B8C00BFE149 /* AddBirthDateTableViewCell.swift in Sources */,
 				D98AE78C235768A600567F54 /* UserDetailViewController.swift in Sources */,
+				D993B051236220E200BFE149 /* SaveTableViewCell.swift in Sources */,
+				D993B03D23621B0700BFE149 /* LabelCollectionViewCell.swift in Sources */,
+				D993B04D23621ED700BFE149 /* AddLocationMapTableViewCell.swift in Sources */,
 				0F56CAE3234B890F00C34A67 /* DatabaseManager.swift in Sources */,
 				D98AE7812357646100567F54 /* ContactDataTableViewCell.swift in Sources */,
 				0F5781D72347C7AF008376DD /* NameDTO.swift in Sources */,
 				0F571BD923466583000BB376 /* UIView+Utils.swift in Sources */,
+				D993B0312362116A00BFE149 /* AddContactDataTableViewCell.swift in Sources */,
 				0F5781DD2347C814008376DD /* IdDTO.swift in Sources */,
 				0F571BDC2346698E000BB376 /* PersonCollectionViewCell.swift in Sources */,
 				D98AE77923575F9000567F54 /* PersonalDataTableViewCell.swift in Sources */,
+				D993B0352362136300BFE149 /* AddGenderTableViewCell.swift in Sources */,
 				0F5781D92347C7D0008376DD /* PictureDTO.swift in Sources */,
 				0F5781DF2347C828008376DD /* LocationDTO.swift in Sources */,
+				D993B04923621D0800BFE149 /* AddLocationTableViewCell.swift in Sources */,
 				0F4E3D16234523E2005DFA5F /* SceneDelegate.swift in Sources */,
 				0F67C746234CEE8D0057394D /* User.swift in Sources */,
 				0F10F41B234BAEB600E08903 /* ApiManager.swift in Sources */,
@@ -495,6 +577,15 @@
 			name = Splash.storyboard;
 			sourceTree = "<group>";
 		};
+		D993B0252361EE1400BFE149 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D993B0242361EE1400BFE149 /* en */,
+				D993B0262361EE3700BFE149 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -502,6 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -562,6 +654,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
